@@ -18,8 +18,8 @@ VAR
 BEGIN
     dot_product(vect1, vect2; ps);
     IF (ps=0) THEN
-        Write('vectors vect1 and vect2 are orthogonal')
+        Write('vectors vect1 and vect2 are orthogonal');
     ELSE
-        Write('vectors vect1 and vect2 are not orthogonal')
+        Write('vectors vect1 and vect2 are not orthogonal');
     END_IF
 END

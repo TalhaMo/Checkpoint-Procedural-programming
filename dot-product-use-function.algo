@@ -18,10 +18,10 @@ VAR
     vect2 : ARRAY_OF FLOAT[3];
     ps:FLOAT;
 BEGIN
-    ps:=dot_product(vect1,vect2)
+    ps:=dot_product(vect1,vect2);
     IF (ps=0) THEN
-        Write('vectors are orthogonal')
+        Write('vectors vect 1 and vect2 are orthogonal');
     ELSE
-        Write('vectors are not orthogonal')
+        Write('vectors vect 1 and vect2 are not orthogonal');
     END_IF
 END
