@@ -1,16 +1,14 @@
 FUNCTION dot_product(v1,v2:ARRAY_OF FLOAT[3]) : FLOAT
 VAR
-    ps:FLOAT:=0;
-    i,j: INTEGER
+    ps:FLOAT;
+    i: INTEGER;
 BEGIN
+    ps:=0;
     FOR i FROM 0 TO 2 STEP 1 DO
-        FOR j FROM 0 TO 2 STEP 1 DO
-        IF (i=j) THEN
-            ps:=ps+v1[i]*v2[j]
-        END_IF
-        END_FOR
+            ps:=ps+v1[i]*v2[i];
     END_FOR
     RETURN ps ;
+
 END
 
 
@@ -18,8 +16,10 @@ ALGORITHM are_orthogonal
 VAR
     vect1 : ARRAY_OF FLOAT[3];
     vect2 : ARRAY_OF FLOAT[3];
+    ps:FLOAT;
 BEGIN
-    IF (dot_product (vect1,vect2)=0) THEN
+    ps:=dot_product(vect1,vect2)
+    IF (ps=0) THEN
         Write('vectors are orthogonal')
     ELSE
         Write('vectors are not orthogonal')
